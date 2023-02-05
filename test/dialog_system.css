@@ -1,0 +1,66 @@
+/* design */
+input[type="checkbox"][id|="dialog_listener"] {/* select only input with type="checkbox" and id starting with "dialog_listener-". The name of the listener will be after « - » */
+  display: none;
+}
+.dialog_barrier {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog_message {
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  border: black solid 2px;
+  padding: 4px;
+}
+label[for|="dialog_listener"] {/* style of button */
+  appearance: auto;
+  writing-mode: horizontal-tb !important;
+  font-style: ;
+  font-variant-ligatures: ;
+  font-variant-caps: ;
+  font-variant-numeric: ;
+  font-variant-east-asian: ;
+  font-weight: ;
+  font-stretch: ;
+  font-size: ;
+  font-family: ;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: buttonface;
+  margin: 0em;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+}
+label[for|="dialog_listener"]:active {
+  border-style: inset;
+}
+label[for|="dialog_listener"]:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+/* functional */
+input[type="checkbox"][id|="dialog_listener"]:checked + .dialog_barrier {
+  visibility: visible;
+}

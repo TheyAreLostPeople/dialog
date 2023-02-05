@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="dialog_system.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Dialog test</title>
+  </head>
+
+  <body>
+
+    <h1> Exemple of uses </h1>
+    <!-- firstly, declare all your dialog listener. their name will be after « - » -->
+    <input type="checkbox" id="dialog_listener-test_1">
+    <div class="dialog_barrier">
+      <div class="dialog_message">
+        Dialog 1
+        <label for="dialog_listener-test_2" tabindex="0">Show dialog 2</label>
+        <label for="dialog_listener-test_1" tabindex="0">Close</label>
+      </div>
+    </div>
+
+    <input type="checkbox" id="dialog_listener-test_2">
+    <div class="dialog_barrier">
+      <div class="dialog_message">
+        Dialog 2
+        <label for="dialog_listener-test_2" tabindex="0">Close</label>
+      </div>
+    </div>
+
+    <!-- and add some button to open these dialog -->
+    <label for="dialog_listener-test_1" tabindex="0">Show dialog</label>
+
+    <label for="dialog_listener-test_1" tabindex="0">Show the same dialog</label>
+
+    <label for="dialog_listener-test_2" tabindex="0">Show an other dialog</label>
+
+    <button>A normal button</button>
+
+  </body>
+
+</html>
